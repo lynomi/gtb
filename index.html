@@ -1,9 +1,26 @@
+<!DOCTYPE html>
 <html lang = "en">
 <head>
-    <title>GTB</title>
+    <title>genshin impact team builder</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function fetchData() {
+            fetch('DataServlet')  // URL of the Java servlet
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('dataDisplay').innerHTML = data.message;
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
 </head>
-<body>
+<body style = "background-color: #200508; color: white; text-align: center;">
     <header>
-        <h1>Welcome to GTB</h1>
+        <h1>Genshin Impact Team Builder</h1>
+        <p>Choose your characters</p>
+        <p>add character images here...</p>
+        <button onclick="fetchData()">Create Teams</button>
+        
     </header>
 </body>
