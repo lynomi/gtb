@@ -7,15 +7,6 @@
     
     <button id="runButton">Run Program</button>
 
-  <script>
-    document.getElementById("runButton").onclick = function() {
-      fetch('https://my-java-api.herokuapp.com/run-program', { method: 'POST' })
-        .then(response => response.json())
-        .then(data => alert(data.message))
-        .catch(error => console.error('Error:', error));
-    };
-  </script>
-    
 </head>
 <body style = "background-color: #200508; color: white; text-align: center;">
     <header>
